@@ -67,7 +67,8 @@ fun AndroidBotCard(){
         modifier = Modifier
             .verticalScroll(rememberScrollState())
             .background(Color.DarkGray)
-            .padding(16.dp),
+            .padding(16.dp)
+            .padding(top = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Box(
@@ -88,20 +89,20 @@ fun AndroidBotCard(){
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(8.dp),
-            color = MaterialTheme.colorScheme.onPrimary
+            color = Color.White
         )
 
         Text(
             text = "Estudiante de Ing.de Software:",
             fontSize = 16.sp,
             fontWeight = FontWeight.SemiBold,
-            color = MaterialTheme.colorScheme.onSecondary
+            color = Color.White
         )
 
         Text(
             text = "Antonio Quijano\n",
             fontSize = 16.sp,
-            color = MaterialTheme.colorScheme.onSecondary
+            color = Color.White
         )
 
         Card(
