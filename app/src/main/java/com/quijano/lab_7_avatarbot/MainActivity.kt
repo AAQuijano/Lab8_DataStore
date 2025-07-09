@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
             Lab_7_AvatarBotTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color =  MaterialTheme.colorScheme.background
                 ) {
                     AndroidBotCard()
                 }
@@ -66,6 +66,7 @@ fun AndroidBotCard(){
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
+            .background(Color.DarkGray)
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
@@ -73,7 +74,7 @@ fun AndroidBotCard(){
             modifier = Modifier
                 .size(150.dp)
                 .clip(CircleShape)
-                .background(Color(0xFF3DDC84))
+                .background(Color.White)
         ){
             Image(
                 painter = painterResource(id = R.drawable.android_bot), // Asegúrate de tener esta imagen en tus recursos
@@ -86,19 +87,27 @@ fun AndroidBotCard(){
             text = "Android Bot",
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary
+            modifier = Modifier.padding(8.dp),
+            color = MaterialTheme.colorScheme.onPrimary
         )
 
         Text(
-            text = "Estudiante de Ing.de Software",
+            text = "Estudiante de Ing.de Software:",
             fontSize = 16.sp,
-            color = MaterialTheme.colorScheme.secondary
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSecondary
+        )
+
+        Text(
+            text = "Antonio Quijano\n",
+            fontSize = 16.sp,
+            color = MaterialTheme.colorScheme.onSecondary
         )
 
         Card(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(16.dp),
-            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
         ) {
             Column(modifier = Modifier.padding(16.dp)){
                 Row(
@@ -125,7 +134,7 @@ fun AndroidBotCard(){
                     text = "Habilidades (Nivel principiante):",
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    modifier = Modifier.padding(bottom = 8.dp)
+                    modifier = Modifier.padding(8.dp)
                 )
 
                 Text(
